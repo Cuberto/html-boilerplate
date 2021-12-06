@@ -1,0 +1,118 @@
+.my-modal {
+    display:inline;
+
+    &_box {
+        $this:&;
+
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        height:100%;
+        width:100%;
+        z-index:200;
+        overflow:hidden;
+
+        pointer-events:none;
+
+        @media (min-width:$screen-sm-min) {
+            align-items:center;
+            justify-content:center;
+        }
+
+        &.-show {
+            display:flex;
+        }
+
+        &.-visible {
+            pointer-events:auto;
+        }
+
+        &-backdrop {
+            display:none;
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+
+            opacity:0;
+            background:rgba($color-text, 0.8);
+
+            transition:opacity 0.4s;
+
+            @media (min-width:$screen-sm-min) {
+                display:block;
+            }
+
+            #{$this}.-visible & {
+                opacity:1;
+            }
+        }
+
+        &-close {
+            position:absolute;
+            top:20px;
+            right:20px;
+            opacity:0;
+
+            transition:opacity 0.2s;
+
+            @media (min-width:$screen-sm-min) {
+                top:30px;
+                right:30px;
+            }
+
+            #{$this}.-visible & {
+                opacity:1;
+            }
+        }
+
+        &-dialog {
+            width:100%;
+            transform:scale(0.9);
+            overflow:auto;
+            -webkit-overflow-scrolling:touch;
+            -ms-overflow-style:none;
+            scrollbar-width:none;
+
+            opacity:0;
+            background:$color-base;
+
+            transition:opacity 0.4s, transform 0.4s;
+
+            @media (min-width:$screen-sm-min) {
+                width:560px;
+
+                border-radius:10px;
+            }
+
+            &::-webkit-scrollbar {
+                display:none;
+            }
+
+            #{$this}.-visible & {
+                opacity:1;
+                transform:translateX(0);
+            }
+        }
+
+        &-content {
+            padding:50px 0 80px 0;
+
+            @media (min-width:$screen-sm-min) {
+                padding:40px 0;
+            }
+        }
+
+        &-container {
+            padding:0 20px;
+
+            @media (min-width:$screen-sm-min) {
+                padding:0 40px;
+            }
+        }
+    }
+}

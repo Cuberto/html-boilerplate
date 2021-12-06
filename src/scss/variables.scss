@@ -1,0 +1,53 @@
+/* Main Colors */
+$color-base:#fff;
+$color-graybase:#000;
+
+$color-primary:#a59dff;
+$color-secondary:#F8762C;
+
+//$color-fill:#F4F6F8;
+//$color-smooth:#B2B2B2;
+//$color-muted:#ECF0F3;
+//$color-disabled:#8C8C8C;
+
+$color-error:#EB4242;
+$color-info:#01D7FD;
+$color-success:#51C67D;
+$color-warning:#FF9F4D;
+$color-danger:$color-error;
+
+$color-bg:$color-base;
+$color-text:#000;
+$color-link:inherit;
+$color-link-hover:inherit;
+
+/* Fonts */
+$font-family:"Roboto", sans-serif;
+$font-family-secondary:sans-serif;
+$font-size:14px;
+$font-weight:normal;
+$letter-spacing:normal;
+$line-height:normal;
+
+/* Screen sizes */
+$screen-xs:375px;
+$screen-sm:768px;
+$screen-md:1024px;
+$screen-lg:1200px;
+$screen-ml:1400px;
+$screen-xl:1600px;
+$screen-ul:1900px;
+
+$screen-xs-min:$screen-xs;
+$screen-xs-max:($screen-sm - 1);
+$screen-sm-min:$screen-sm;
+$screen-sm-max:($screen-md - 1);
+$screen-md-min:$screen-md;
+$screen-md-max:($screen-lg - 1);
+$screen-lg-min:$screen-lg;
+$screen-lg-max:($screen-ml - 1);
+$screen-ml-min:$screen-ml;
+$screen-ml-max:($screen-xl - 1);
+$screen-xl-min:$screen-xl;
+$screen-xl-max:($screen-ul - 1);
+$screen-ul-min:$screen-ul;

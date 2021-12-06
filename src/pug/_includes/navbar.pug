@@ -1,0 +1,15 @@
+mixin navbar(options)
+    - options = Object.assign({}, {navActive: "home"}, options)
+    nav.my-navbar&attributes(attributes)
+        .my-navbar-strip
+            .my-navbar-container
+                .my-navbar-grid
+                    .my-navbar-col.-left
+                        a.my-navbar-logo(href="/", aria-label="Home") Logo
+                    .my-navbar-col.-left
+                        .my-navbar-navs
+                            a.my-navbar-nav(href="/test/", class=options.navActive === "test" ? "-active" : ""): span Test
+                        .my-navbar-toggle
+                            button.my-btn.my-btn_menu(aria-label="Menu")
+                                span
+                                span

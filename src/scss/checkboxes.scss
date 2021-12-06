@@ -1,0 +1,7 @@
+.my-checkbox {
+    display:inline;
+
+    &_flat {
+        $this:&;
+    }
+}

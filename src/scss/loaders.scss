@@ -1,0 +1,30 @@
+.my-loader {
+    display:inline;
+
+    &_overlay {
+        $this:&;
+
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index:999;
+        max-height:0%;
+        overflow:hidden;
+
+        pointer-events:none;
+        opacity:0;
+        background:$color-base;
+
+        transition:opacity 0.8s, max-height 0s 0.8s;
+
+        &.-visible {
+            pointer-events:auto;
+            opacity:1;
+            max-height:100%;
+            transition-delay:0s, 0s;
+            transition-duration:0.3s, 0s;
+        }
+    }
+}

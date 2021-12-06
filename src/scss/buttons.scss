@@ -1,0 +1,126 @@
+.my-btn {
+    display:inline;
+
+    &_dummy {
+        position:relative;
+        display:inline-block;
+        height:auto;
+        margin:0;
+        padding:0;
+
+        color:inherit;
+        background:none;
+        border:0;
+        border-radius:0;
+        outline:none !important;
+
+        font-family:inherit;
+        font-size:inherit;
+        font-weight:inherit;
+        letter-spacing:inherit;
+        line-height:inherit;
+        text-align:inherit;
+        text-transform:inherit;
+        text-indent:inherit;
+
+        &:hover, &:focus {
+            text-decoration:none;
+        }
+    }
+
+    &_cta {
+        @extend .my-btn_dummy;
+
+        min-width:120px;
+        height:50px;
+
+        color:$color-base;
+        border-radius:30px;
+        background:$color-graybase;
+
+        line-height:50px;
+        text-align:center;
+        text-decoration:none;
+
+        transition:background 0.2s;
+
+        &:hover {
+            color:$color-base;
+            background:lighten($color-graybase, 30%);
+        }
+
+        &.-inverse {
+            color:$color-text;
+            background:$color-base;
+
+            &:hover {
+                color:$color-text;
+                background:darken($color-base, 30%);
+            }
+        }
+    }
+
+    &_menu {
+        @extend .my-btn_dummy;
+
+        width:24px;
+
+        &:before {
+            content:"";
+            position:absolute;
+            top:-10px;
+            left:-10px;
+            right:-10px;
+            bottom:-10px;
+        }
+
+        span {
+            position:relative;
+            display:block;
+            width:100%;
+            height:2px;
+            margin:8px 0;
+            top:0;
+
+            border-radius:25px;
+            background:currentColor;
+
+            transition:top ease-out 0.15s 0.15s, transform ease-out 0.15s 0s;
+        }
+
+        &.-active {
+            span {
+                transition:top ease-out 0.15s, transform ease-out 0.15s 0.15s;
+            }
+
+            span:first-child {
+                top:6px;
+                transform:rotate(45deg);
+            }
+
+            span:last-child {
+                top:-4px;
+                transform:rotate(-45deg);
+            }
+        }
+    }
+
+    &_close {
+        @extend .my-btn_dummy;
+
+        width:48px;
+        height:48px;
+
+        opacity:0.8;
+
+        font-size:18px;
+        line-height:0;
+        text-align:center;
+
+        transition:opacity 0.2s;
+
+        &:hover, &:focus {
+            opacity:1;
+        }
+    }
+}

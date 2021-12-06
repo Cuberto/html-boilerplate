@@ -1,0 +1,65 @@
+.my-view {
+    height:100%;
+}
+
+.my-layout {
+    height:100%;
+
+    /* Smooth Scrollbar Approach */
+    .scrollbar {
+        &-track {
+            right:3px;
+            background:none;
+            z-index:200;
+        }
+
+        &-thumb {
+            &-y {
+                background:mix($color-text, $color-base, 80%);
+
+                &:before {
+                    content:"";
+                    display:block;
+                    position:absolute;
+                    top:0;
+                    right:-3px;
+                    left:-3px;
+                    bottom:0;
+                }
+
+                &:hover {
+                    background:$color-text;
+                }
+            }
+        }
+    }
+
+    .scroll-content {
+        height:100%;
+        will-change:transform;
+    }
+}
+
+.my-content {
+    padding:140px 0;
+
+    @media (min-width:$screen-md-min) {
+        padding:160px 0;
+    }
+
+    @media (min-width:$screen-lg-min) {
+        padding:250px 0;
+    }
+}
+
+.my-container {
+    padding:0 20px;
+
+    @media (min-width:$screen-sm-min) {
+        padding:0 30px;
+    }
+
+    @media (min-width:$screen-lg-min) {
+        padding:0 60px;
+    }
+}

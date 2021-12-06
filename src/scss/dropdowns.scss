@@ -1,0 +1,7 @@
+.my-dropdown {
+    display:inline;
+
+    &_select {
+        $this:&;
+    }
+}

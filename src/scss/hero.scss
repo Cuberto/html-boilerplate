@@ -1,0 +1,39 @@
+.my-hero {
+    $root:&;
+
+    position:relative;
+    height:100vh;
+
+    &.-inverse {
+        color:$color-base;
+        background:$color-graybase;
+    }
+
+    &-content {
+        @extend .my-content;
+    }
+
+    &-container {
+        @extend .my-container;
+    }
+
+    &-header {
+        h1 {
+            font-size:60px;
+        }
+    }
+
+    &-text {
+        padding:40px 0 0 0;
+
+        font-size:18px;
+
+        @media (min-width:$screen-sm-min) {
+            max-width:50%;
+        }
+    }
+
+    &-action {
+        margin:40px 0 0 0;
+    }
+}

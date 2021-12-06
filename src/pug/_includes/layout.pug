@@ -1,0 +1,16 @@
+block variables
+doctype html
+html(lang=__.lang, class="no-js")
+    head
+        include head
+    body
+        include mixins/svgicon
+        include mixins/svgimage
+        include navbar
+        include loader
+        include footer
+
+        block content
+            span no content provied
+
+        include scripts

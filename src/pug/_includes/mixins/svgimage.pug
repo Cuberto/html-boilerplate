@@ -1,0 +1,2 @@
+mixin svgimage(path)
+    !=fs.readFileSync('./src/static' + path).toString().replace(/\n/gi, '')

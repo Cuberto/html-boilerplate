@@ -1,0 +1,38 @@
+.my-input {
+    display:inline;
+
+    &_light {
+        $this:&;
+
+        input {
+            margin:0;
+            padding:13px 0;
+            width:100%;
+
+            color:$color-text;
+            background:none;
+            border:0;
+            border-bottom:2px rgba($color-text, 0.2) solid;
+            border-radius:0;
+            outline:none;
+
+            font-size:18px;
+            font-weight:300;
+            letter-spacing:0.34px;
+            line-height:1;
+
+            &:hover {
+                border-bottom-color:rgba($color-text, 0.5);
+            }
+
+            &:focus {
+                border-bottom-color:$color-text;
+            }
+
+            &:invalid {
+                box-shadow:none;
+                outline:0;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+extends /_includes/layout
+
+block title
+    title Page name
+
+block content
+    +navbar({navActive: "home"})
+
+    .my-view#view-main
+        .my-layout(role="main")
+
+            header.my-hero
+                .my-hero-content
+                    .my-hero-container
+                        .my-hero-header
+                            h1 Homepage
+                        .my-hero-text
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id quam ultrices neque vestibulum mollis et non nunc. Nulla congue ut purus non sagittis. Nunc efficitur velit eu diam semper scelerisque.
+                        .my-hero-action
+                            a.my-btn.my-btn_cta(href="/test/")
+                                span Testpage
